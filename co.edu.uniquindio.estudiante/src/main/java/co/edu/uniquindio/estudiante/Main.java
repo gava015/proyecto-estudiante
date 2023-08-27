@@ -24,7 +24,7 @@ public class Main {
         Estudiante estudianteDos = crearEstudiante("Juan Pablo Gomez","juanpablo@uqvirtual.edu.co",2,20,3.2,4.4,3.9);
         Estudiante estudianteTres= crearEstudiante("Camilo Cardona","camilouqvirtual.edu.co",2,22,2.9,3.9,4.8);
 
-        double definitivaEstudianteUno = 
+        double definitivaEstudianteUno = estudianteUno.calcularNotaDefinitiva()
 
 
 

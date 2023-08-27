@@ -65,9 +65,8 @@ public class Estudiante {
         this.notaTres = notaTres;
     }
 
-    public static double calcularNotaDefinitiva(double nota1, double nota2, double nota3) {
-        Double definitiva = (nota1 + nota2 + nota3) / 3;
+    public  double calcularNotaDefinitiva() {
+        Double definitiva = (this.notaUno + this.notaDos + this.notaTres) / 3;
         return definitiva;
     }
-
 }
