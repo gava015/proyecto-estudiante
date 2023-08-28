@@ -49,7 +49,7 @@ public class Estudiante {
         this.notaUno = notaUno;
     }
 
-    public double getNotaDos(double notaDos) {
+    public double getNotaDos() {
         return notaDos;
     }
 
