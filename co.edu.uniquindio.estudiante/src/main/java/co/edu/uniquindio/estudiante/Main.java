@@ -1,8 +1,11 @@
 package co.edu.uniquindio.estudiante;
 
+import co.edu.uniquindio.estudiante.model.Curso;
+import co.edu.uniquindio.estudiante.model.Docente;
 import co.edu.uniquindio.estudiante.model.Estudiante;
 
 public class Main {
+
 
     public static Estudiante crearEstudiante(String nombre, String correo, int semestre, int edad, double notaUno,
                                              double notaDos, double notaTres) {
@@ -133,6 +136,35 @@ public class Main {
         Estudiante estudianteUno = crearEstudiante("Valentina Garzón", "valentina.g@uqvirtual.edu.co", 2, 26, 2.6, 2.5, 2.0);
         Estudiante estudianteDos = crearEstudiante("Juan Pablo Gomez", "juanpablo@uqvirtual.edu.co", 2, 20, 4.5, 4.4, 4.9);
         Estudiante estudianteTres = crearEstudiante("Camilo Cardona", "camilouqvirtual.edu.co", 2, 22, 2.9, 3.9, 4.8);
+
+        Curso curso = new Curso("Programación",2,"02",5,"noche");
+        Curso cursoDos = new Curso("matematicas", 3,"03",6,"noche");
+
+        cursoDos.setEstudiante1(estudianteUno);
+        cursoDos.setEstudiante2(estudianteDos);
+        cursoDos.setEstudiante3(estudianteTres);
+
+
+
+        Docente docente = new Docente("Oscar", "1234@");
+        curso.setDocente(docente);
+
+        Docente docenteDos = new Docente();
+        docenteDos.setNombre("Wanda");
+        docenteDos.setCorreo("1234@");
+
+        cursoDos.setDocente(docenteDos);
+
+        curso.setDocente(docenteDos);
+
+        curso.setEstudiante1(estudianteUno);
+        curso.setEstudiante2(estudianteDos);
+        curso.setEstudiante3(estudianteTres);
+
+        System.out.println(curso.getEstudiante1().getNombre());
+
+        System.out.println(curso.getDocente().getNombre());
+
 
         System.out.println("El promedio de edad del curso es : " + calcularPromedioEdad(estudianteUno.getEdad(),estudianteDos.getEdad(),estudianteTres.getEdad()));
 
